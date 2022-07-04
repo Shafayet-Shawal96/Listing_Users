@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
@@ -9,13 +9,12 @@ function App() {
     setUsers((preUsers)=>{
       return [user, ...preUsers];
     });
-    console.log(users);
   }
 
-  return <div>
+  return <>
     <AddUser addUser={addUser}/>
     <UsersList users={users}/>
-  </div>;
+  </>;
 }
 
 export default App;
